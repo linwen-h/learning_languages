@@ -24,11 +24,11 @@ func main () {
 	regular_map := make(map[rune]int)
 	cipher_map := make(map[rune]int)
 
-	for pos, char := range cipher{
+	for pos, char := range cipher{ 
 		cipher_map[char] = pos
 	}
 
-	for pos, char := range regular_alpha{
+	for pos, char := range regular_alpha {
 		regular_map[char] = pos
 	}
 
@@ -39,7 +39,7 @@ func main () {
 	
 	flag.Parse()
 
-	if *typePtr == "e"{
+	if *typePtr == "e" {
 		simple_cipher(*wordPtr, cipher_map, regular_alpha)
 	} else { 
 		simple_cipher(*wordPtr, regular_map, cipher)
